@@ -18,3 +18,7 @@
 | シート1 | 0 |
 | シート2 | 1 |
 | シート3 | 2 |
+
+<br><br>
+### JSONをダウンロード
+SpreadsheetIDとシート番号を入力して<font color="Blue">convert</font>と書かれたボタンをクリックするとちゃんと**整形**されたdata.jsonという名前でダウンロードされます
