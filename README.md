@@ -27,7 +27,7 @@ GASを実行するアカウントがスプレッドシートのデータを取�
 ### 読み取る範囲
 1行目はjsonの**key**になり、2行目以降が**value**になります  
 つまり、**A1**の文字列が**A列**のkeyになります  
-*※valueは全て**String型**になります*  
+※valueは全て**String型**になります  
 <br><br>
 ### JSONをダウンロード
 SpreadsheetIDとシート番号を入力して<font color="Blue">convert</font>と書かれたボタンをクリックするとちゃんと**整形**されたdata.jsonという名前でダウンロードされます
