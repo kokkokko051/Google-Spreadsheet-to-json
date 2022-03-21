@@ -11,14 +11,17 @@
 > ![exampless.jpg](exampless.jpg "ss")
 <br>
 
-例では右から
-| 1 | 2 |
-|:-:|:-:|
+例では
 | シート名 | シート番号 |
+|:-:|:-:|
 | シート1 | 0 |
 | シート2 | 1 |
 | シート3 | 2 |
 
+となります
+
 <br><br>
 ### JSONをダウンロード
 SpreadsheetIDとシート番号を入力して<font color="Blue">convert</font>と書かれたボタンをクリックするとちゃんと**整形**されたdata.jsonという名前でダウンロードされます
+<br><br><br>
+##### ※JavaScriptを必ず有効にしてください
