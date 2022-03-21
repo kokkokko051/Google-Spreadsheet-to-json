@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>spreadsheet => json</title>
+    <script type="text/javascript">
+      async function convert() {
+        console.time("time");
+        document.getElementById("text").remove();
+        document.getElementById("download").insertAdjacentHTML("afterend", "<p id='text'>処理中</p>");
+
+        const url = document.getElementById('url').value;
+        const page = document.getElementById("page").value;
+        const base = "https://script.google.com/macros/s/AKfycbw20bC2139jxsxBvbzjm_iLEJN-OMzP5iaFny6h4LeWKoYvvK7HKiKh650lLcDt1C95Eg/exec";
+        const to = base + "?url=" + url + "&page=" + page;
+        console.log(url, page, to);
+        console.log(typeof(url), typeof(page), typeof(to))
+
+        const res = await fetch(to);
+        const json = await res.json();
+        console.log(json);
+        const str = JSON.stringify(json.data, null, "\t");
+        console.log(str);
+
+        const blob = new Blob([str],{type:"application/json"});
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'data.json';
+        link.click();
+
+        document.getElementById("text").remove();
+        document.getElementById("download").insertAdjacentHTML("afterend", "<p id='text'></p>");
+        console.timeEnd("time")
+      }
+    </script>
+  </head>
+  <body>
+    <label><a href="https://developers.google.com/sheets/api/guides/concepts#spreadsheet">Spreadsheet ID</a>
+        <input type="text" id="url">
+    </label><br>
+    <label>シート番号
+        <input type="text" id="page" value="0">
+    </label><br>
+    <button type="button" onclick="convert();" id="download">convert</button>
+    <p id="text"></p>
+  </body>
+</html>
