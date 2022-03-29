@@ -33,3 +33,5 @@ GASを実行するアカウントがスプレッドシートのデータを取�
 SpreadsheetIDとシート番号を入力して<font color="Blue">convert</font>と書かれたボタンをクリックするとちゃんと**整形**されたdata.jsonという名前でダウンロードされます
 <br><br><br>
 ##### ※JavaScriptを必ず有効にしてください
+<br>  <br>  
+<a href="https://youtu.be/vcpvQ3vvqqU">demo</a>
